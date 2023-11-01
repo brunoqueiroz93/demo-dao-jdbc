@@ -42,6 +42,11 @@ public class Program {
          seller.setEmail("brunosilva@gmail.com");
          sellerDao.update(seller);
          System.out.println("Updated completed!");
+         
+         System.out.println("\n==== TESTE 6 : Seller delete ====");
+         seller = sellerDao.findById(14);
+         sellerDao.deleteById(seller.getId());
+         System.out.println("Deleted completed!");
 	}
 
 }
