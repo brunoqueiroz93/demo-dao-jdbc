@@ -97,9 +97,9 @@ public class SellerDaoJDBC implements SellerDao{
 		PreparedStatement st = null;
 		ResultSet rs = null;
 		try {
-		    st = conn.prepareStatement("select s.*, d.name as depName\r\n"
-		    		+ "from seller s\r\n"
-		    		+ "inner join department d on s.departmentId = d.id\r\n"
+		    st = conn.prepareStatement("select s.*, d.name as depName "
+		    		+ "from seller s "
+		    		+ "inner join department d on s.departmentId = d.id "
 		    		+ "where s.id = ?");
 		    st.setInt(1, id);
 		    rs = st.executeQuery();
